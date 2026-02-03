@@ -3,7 +3,7 @@ import { faker } from "@faker-js/faker";
 import User from "../models/user.model.js";
 import { APP_DB_URI } from "../configs/environment.js";
 
-const TOTAL_USERS = 10000;
+const TOTAL_USERS = 50000;
 
 const connectDB = async () => {
   await mongoose.connect(APP_DB_URI, {
