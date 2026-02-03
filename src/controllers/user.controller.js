@@ -6,16 +6,14 @@ export const searchUserByName = async (req, res, next) => {
 
     const start = Date.now();
 
-    const users = await User.find({
-      name: new RegExp(name, "i"), // case-insensitive search
-    });
+    const users = await User.find({ name }); // ✅ exact match
 
     const end = Date.now();
 
     res.status(200).json({
-      success: true,
-      data: users,
+      count: users.length,
       timeTakenMs: end - start,
+      data: users
     });
   } catch (error) {
     next(error);
