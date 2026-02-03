@@ -1,0 +1,19 @@
+{
+  "name": "index-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch --env-file=.env src/server.js",
+    "seed": "node --env-file=.env src/seed/user.seed.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@faker-js/faker": "^10.2.0",
+    "express": "^5.2.1",
+    "mongoose": "^9.1.5"
+  }
+}
